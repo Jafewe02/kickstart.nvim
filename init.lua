@@ -17,6 +17,7 @@ vim.opt.number = true
 -- Make line numbers relative to position
 vim.opt.relativenumber = true
 
+--test
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
