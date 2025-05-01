@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd({ 'WinScrolled', 'WinResized', 'BufWinEnter', 'CursorHold', 'InsertLeave', 'BufModifiedSet' }, {
+  group = vim.api.nvim_create_augroup('barbecue.updater', {}),
+  callback = function()
+    require('barbecue.ui').update()
+  end,
+})

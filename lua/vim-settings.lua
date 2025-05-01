@@ -83,3 +83,6 @@ vim.opt.confirm = true
 vim.opt.foldcolumn = '0'
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
+
+-- Barbecue settings for better performance
+vim.opt.updatetime = 200

@@ -10,6 +10,7 @@ require 'lazy-install'
 -- [[ Configure the lazy plugins to be isntalled ]]
 require 'lazy-plugins'
 
+require 'auto-cmd'
 -- colorscheme
 vim.cmd.colorscheme 'catppuccin-mocha'
 
