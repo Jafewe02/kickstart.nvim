@@ -33,5 +33,84 @@ return {
     words = { enabled = 'false' },
     zen = { enabled = 'false' },
   },
-  keys = {},
+  keys = {
+    {
+      '<leader>sh',
+      function()
+        Snacks.picker.help()
+      end,
+      desc = '[S]earch [H]elp',
+    },
+    {
+      '<leader>sk',
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = '[S]earch [K]eymaps',
+    },
+    {
+      '<leader>sf',
+      function()
+        Snacks.picker.files()
+      end,
+      desc = '[S]earch [F]iles',
+    },
+    {
+      '<leader>sp',
+      function()
+        Snacks.picker.pickers()
+      end,
+      desc = '[S]earch [P]icker',
+    },
+    {
+      '<leader>sw',
+      function()
+        Snacks.picker.grep_word()
+      end,
+      desc = 'Visual selection or word',
+      mode = { 'n', 'x' },
+    },
+    {
+      '<leader>sg',
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = '[S]earch by [G]rep',
+    },
+    {
+      '<leader>sd',
+      function()
+        Snacks.picker.diagnostics()
+      end,
+      desc = '[S]earch [D]iagnostics',
+    },
+    {
+      '<leader>sr',
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = '[S]earch [R]esume',
+    },
+    {
+      '<leader>s.',
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = '[S]earch Recent Files',
+    },
+    {
+      '<leader><leader>',
+      function()
+        Snacks.picker.smart()
+      end,
+      desc = 'Smart Find Files',
+    },
+    {
+      '<leader>/',
+      function()
+        Snacks.picker.lines()
+      end,
+      desc = '[/] Grep',
+    },
+  },
 }
