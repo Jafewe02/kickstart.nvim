@@ -35,6 +35,13 @@ return {
   },
   keys = {
     {
+      '<leader>l',
+      function()
+        Snacks.lazygit.open()
+      end,
+      desc = 'Open Lazygit',
+    },
+    {
       '<leader>sh',
       function()
         Snacks.picker.help()
