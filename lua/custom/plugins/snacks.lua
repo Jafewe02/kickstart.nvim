@@ -15,7 +15,7 @@ return {
     indent = { enabled = 'false' },
     input = { enabled = 'false' },
     layout = { enabled = 'false' },
-    lazygit = { enabled = 'false' },
+    lazygit = { enabled = 'true' },
     notifier = { enabled = 'false' },
     notify = { enabled = 'false' },
     picker = { enabled = 'true' },
