@@ -6,32 +6,13 @@ return {
     animate = { enabled = 'true', duration = 5, easing = 'linear', fps = 60 },
     bufdelete = { enabled = 'true' },
     dashboard = { enabled = 'true', example = 'compact_files' },
-    debug = { enabled = 'false' },
-    dim = { enabled = 'false' },
-    explorer = { enabled = 'true' },
-    git = { enabled = 'false' },
-    gitbrowse = { enabled = 'false' },
-    image = { enabled = 'false' },
-    indent = { enabled = 'false' },
-    input = { enabled = 'false' },
-    layout = { enabled = 'false' },
-    lazygit = { enabled = 'true' },
-    notifier = { enabled = 'false' },
-    notify = { enabled = 'false' },
+    debug = { enabled = 'true' },
+    input = { enabled = 'true' },
+    notifier = { enabled = 'true' },
     picker = { enabled = 'true' },
-    profiler = { enabled = 'false' },
-    quickfile = { enabled = 'false' },
-    rename = { enabled = 'false' },
-    scope = { enabled = 'false' },
-    scratch = { enabled = 'false' },
-    scroll = { enabled = 'false' },
-    statuscolumn = { enabled = 'false' },
-    terminal = { enabled = 'false' },
-    toggle = { enabled = 'false' },
-    util = { enabled = 'false' },
-    win = { enabled = 'false' },
-    words = { enabled = 'false' },
-    zen = { enabled = 'false' },
+    quickfile = { enabled = 'true' },
+    statuscolumn = { enabled = 'true' },
+    indent = { enabled = 'true' },
   },
   keys = {
     {
@@ -118,6 +99,22 @@ return {
         Snacks.picker.lines()
       end,
       desc = '[/] Grep',
+    },
+    {
+      ']]',
+      function()
+        Snacks.words.jump(vim.v.count1)
+      end,
+      desc = 'Next Reference',
+      mode = { 'n', 't' },
+    },
+    {
+      '[[',
+      function()
+        Snacks.words.jump(-vim.v.count1)
+      end,
+      desc = 'Prev Reference',
+      mode = { 'n', 't' },
     },
   },
 }

@@ -86,3 +86,6 @@ vim.o.foldlevelstart = 99
 
 -- Barbecue settings for better performance
 vim.o.updatetime = 200
+
+-- Set vim diagnostics
+vim.diagnostic.config { virtual_text = true }
