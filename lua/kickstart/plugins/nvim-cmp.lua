@@ -115,6 +115,11 @@ return { -- Autocompletion
       default = { 'lsp', 'path', 'snippets', 'lazydev' },
       providers = {
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+        cmdline = {
+          enabled = function()
+            return vim.fn.getcmdtype() ~= ':' or not vim.fn.getcmdline():match "^[%%0-9,'<>%-]*!"
+          end,
+        },
       },
     },
     snippets = { preset = 'luasnip' },
