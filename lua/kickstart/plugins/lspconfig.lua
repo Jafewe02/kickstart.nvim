@@ -210,6 +210,8 @@ return {
       'stylua', -- Used to format Lua code
       'clang-format',
       'codelldb',
+      'eslint_d',
+      'prettier',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
